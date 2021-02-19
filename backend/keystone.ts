@@ -9,8 +9,8 @@ import 'dotenv/config';
 
 // Schemas
 import { User } from './schemas/User';
-
-// import { insertSeedData } from './seed-data';
+import { Book } from './schemas/Book';
+import { BookImage } from './schemas/BookImage';
 
 const databaseURL =
   process.env.DATABASE_URL || 'mongodb://localhost/keystone-bookie-project';
@@ -43,6 +43,8 @@ export default withAuth(
     },
     lists: createSchema({
       User,
+      Book,
+      BookImage,
     }),
     // show the UI only for people who pass this test
     ui: {
