@@ -4,7 +4,10 @@ const FooterStyles = styled.footer`
   display: grid;
   height: 15vh;
   grid-template-columns: 1fr 1fr 1fr;
-  background: var(--color-beige);
+
+  .footer-box {
+    background: var(--color-beige);
+  }
 `;
 
 const Footer = () => {

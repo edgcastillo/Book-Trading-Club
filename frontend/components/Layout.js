@@ -39,7 +39,7 @@ const GlobalStyles = createGlobalStyle`
 const Container = styled.div`
   width: 100%;
   display: grid;
-  grid-template-rows: 66px 1fr 200px;
+  grid-template-rows: 66px 1fr auto;
 `;
 
 const Layout = ({ children }) => {

@@ -48,6 +48,29 @@ const NavLinkStyles = styled.ul`
   }
 `;
 
+const UserLinkStyles = styled.ul`
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+
+  li:first-child {
+    margin-bottom: 5px;
+  }
+`;
+
+const UserLinks = () => {
+  return (
+    <UserLinkStyles>
+      <li>Sign Up</li>
+      <li>Login</li>
+    </UserLinkStyles>
+  );
+};
+
 const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   return (
@@ -65,12 +88,14 @@ const Navbar = () => {
           style={{ color: 'white' }}
           onClick={() => setShowDropdown(!showDropdown)}
         />
+        {showDropdown && (
+          <>
+            <Tooltip>
+              <UserLinks />
+            </Tooltip>
+          </>
+        )}
       </NavLinkStyles>
-      {showDropdown && (
-        <Tooltip>
-          <p>hello</p>
-        </Tooltip>
-      )}
     </NavbarStyles>
   );
 };
