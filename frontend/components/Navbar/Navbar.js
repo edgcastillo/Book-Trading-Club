@@ -7,12 +7,20 @@ import Logo from '../../public/Closed_Book_Icon.svg';
 import Tooltip from '../Tooltip/Tooltip';
 
 const NavbarStyles = styled.nav`
-  max-width: var(--max-width);
+  max-width: var(--max-width-small);
   height: 4.15rem;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 300px 1fr;
   align-items: center;
+
+  @media screen and (min-width: 1100px) {
+    max-width: var(--max-width-medium);
+  }
+
+  @media screen and (min-width: 1300px) {
+    max-width: var(--max-width-desktop);
+  }
 `;
 
 const LogoStyles = styled.div`

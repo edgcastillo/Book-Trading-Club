@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const FooterStyles = styled.footer`
   display: grid;
-  height: 15vh;
+
   grid-template-columns: 1fr 1fr 1fr;
 
   .footer-box {

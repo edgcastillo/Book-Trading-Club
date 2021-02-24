@@ -10,6 +10,11 @@ const GlobalStyles = createGlobalStyle`
     font-weight: normal;
     font-style: normal;
   }
+
+  html, body {
+    width: 100%;
+    height: 100%;
+  }
   html {
     box-sizing: border-box;
     --black: #393939;
@@ -18,7 +23,9 @@ const GlobalStyles = createGlobalStyle`
     --color-beige: #FFEEE6;
     --color-secondary: #573ba3;
     --color-secondary-dark: #2b0f42;
-    --max-width: 1024px;
+    --max-width-desktop: 1024px;
+    --max-width-medium: 960px;
+    --max-width-small: 620px;
     font-size: 100%;
   }
   *, *:before, *:after {
@@ -39,17 +46,20 @@ const GlobalStyles = createGlobalStyle`
 
 const Container = styled.div`
   width: 100%;
+  height: 100vh;
   display: grid;
-  grid-template-rows: 66px 1fr auto;
+  grid-template-rows: 1fr auto;
 `;
 
 const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyles />
-      <Header />
-      {children}
-      <Footer />
+      <Container>
+        <Header />
+        {children}
+        <Footer />
+      </Container>
     </>
   );
 };
