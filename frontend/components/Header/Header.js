@@ -4,7 +4,7 @@ import Navbar from '../Navbar/Navbar';
 
 const HeaderStyles = styled.header`
   width: 100%;
-  height: 66px;
+  height: 4.15rem;
   position: fixed;
   top: 0;
   background: var(--color-secondary);

@@ -14,10 +14,12 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     --black: #393939;
     --white: #fff;
+    --red-primary: #DE2454;
     --color-beige: #FFEEE6;
     --color-secondary: #573ba3;
     --color-secondary-dark: #2b0f42;
     --max-width: 1024px;
+    font-size: 100%;
   }
   *, *:before, *:after {
     box-sizing: inherit;
@@ -26,7 +28,6 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'radnika_next', --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 0;
     margin: 0;
-    font-size: 1rem;
   }
   ul {
     list-style: none;

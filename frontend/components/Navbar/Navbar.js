@@ -8,7 +8,7 @@ import Tooltip from '../Tooltip/Tooltip';
 
 const NavbarStyles = styled.nav`
   max-width: var(--max-width);
-  height: 66px;
+  height: 4.15rem;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 300px 1fr;
@@ -27,7 +27,7 @@ const LogoStyles = styled.div`
     justify-content: start;
     h1 {
       color: var(--white);
-      width: 90px;
+      width: 5.6rem;
       cursor: pointer;
       font-weight: 200;
       font-size: 2rem;

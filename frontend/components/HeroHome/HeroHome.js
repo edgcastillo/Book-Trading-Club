@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import SearchBar from '../SearchBar/SearchBar';
 
 const HeroStyles = styled.section`
   background: var(--color-secondary);
@@ -20,6 +21,7 @@ const Hero = () => {
   return (
     <HeroStyles>
       <h1>Book Trading Club. Connecting people with Books</h1>
+      <SearchBar />
     </HeroStyles>
   );
 };
