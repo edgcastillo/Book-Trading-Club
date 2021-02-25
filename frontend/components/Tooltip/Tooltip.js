@@ -16,7 +16,7 @@ const TooltipStyles = styled.div`
   border-radius: 5px;
   top: 50px;
   height: 75px;
-  left: 91.5%;
+  left: 90.5%;
   width: 100px;
   background: var(--white);
 

@@ -24,8 +24,7 @@ const GlobalStyles = createGlobalStyle`
     --color-secondary: #573ba3;
     --color-secondary-dark: #2b0f42;
     --max-width-desktop: 1024px;
-    --max-width-medium: 960px;
-    --max-width-small: 620px;
+    --max-width-tablet: 768px;
     font-size: 100%;
   }
   *, *:before, *:after {
@@ -38,6 +37,7 @@ const GlobalStyles = createGlobalStyle`
   }
   ul {
     list-style: none;
+    padding: 0;
   }
   a {
     text-decoration: none;
@@ -48,7 +48,7 @@ const Container = styled.div`
   width: 100%;
   height: 100vh;
   display: grid;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: 1fr 50px;
 `;
 
 const Layout = ({ children }) => {

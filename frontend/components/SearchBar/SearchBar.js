@@ -6,7 +6,8 @@ const SearchBarContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 5px;
-  width: 21rem;
+  width: 15rem;
+  /* width: 21rem; */
   height: 3.5rem;
   padding: 0 10px;
   background: var(--white);
