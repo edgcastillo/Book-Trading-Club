@@ -23,6 +23,7 @@ const GlobalStyles = createGlobalStyle`
     --color-beige: #FFEEE6;
     --color-secondary: #573ba3;
     --color-secondary-dark: #2b0f42;
+    --color-light-gray: #ededed;
     --max-width-desktop: 1024px;
     --max-width-tablet: 768px;
     font-size: 100%;

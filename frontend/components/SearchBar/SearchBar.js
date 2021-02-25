@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import SearchRoundedIcon from '@material-ui/icons/SearchRounded';
 import styled from 'styled-components';
+import SearchRoundedIcon from '@material-ui/icons/SearchRounded';
+import { RoundButton } from '../Button/Button';
+import { devices } from '../MediaQueries';
 
 const SearchBarContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 5px;
   width: 15rem;
-  /* width: 21rem; */
   height: 3.5rem;
   padding: 0 10px;
   background: var(--white);
@@ -26,20 +27,16 @@ const SearchBarContainer = styled.div`
     padding-left: 10px;
   }
 
-  .search-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
+  .search-btn-container {
     align-self: center;
-    background: var(--red-primary);
-    border: none;
   }
 
   .search-button:focus {
     outline: 0;
+  }
+
+  @media ${devices.laptop} {
+    width: 21rem;
   }
 `;
 
@@ -52,9 +49,11 @@ const SearchBar = () => {
         aria-label="search books"
         placeholder="Search"
       />
-      <button type="submit" className="search-button">
-        <SearchRoundedIcon style={{ color: 'white' }} />
-      </button>
+      <div className="search-btn-container">
+        <RoundButton search>
+          <SearchRoundedIcon style={{ color: 'white' }} />
+        </RoundButton>
+      </div>
     </SearchBarContainer>
   );
 };

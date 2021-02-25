@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Triangle = styled.div`
   position: absolute;
-  left: 97%;
+  right: 65%;
   top: 35px;
   width: 0;
   height: 0;
@@ -13,11 +13,12 @@ const Triangle = styled.div`
 
 const TooltipStyles = styled.div`
   position: absolute;
+  font-size: 0.88rem;
   border-radius: 5px;
   top: 50px;
-  height: 75px;
-  left: 90.5%;
-  width: 100px;
+  height: 65px;
+  right: 10%;
+  width: 85px;
   background: var(--white);
 
   .tooltip-container {

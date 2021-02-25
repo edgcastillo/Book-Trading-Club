@@ -5,13 +5,16 @@ const SideNavContainerStyles = styled.div`
   height: 100vh;
   width: 100vw;
   position: fixed;
+  top: 0;
+  left: 100%;
   background: var(--white);
+  transform: translateX(${(props) => (props.toggleSidenav ? '-100%' : '0')});
 `;
 
-const SideNav = () => {
+const SideNav = ({ toggleSidenav }) => {
   return (
-    <SideNavContainerStyles>
-      <h1>hello</h1>
+    <SideNavContainerStyles toggleSidenav={toggleSidenav}>
+      <p>hola</p>
     </SideNavContainerStyles>
   );
 };

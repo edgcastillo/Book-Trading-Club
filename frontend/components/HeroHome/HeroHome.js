@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import SearchBar from '../SearchBar/SearchBar';
+import { devices } from '../MediaQueries';
 
 const HeroStyles = styled.section`
   background: var(--color-secondary);
@@ -15,14 +16,21 @@ const HeroStyles = styled.section`
     max-width: 16rem;
     text-align: center;
   }
-  /* h1 {
-    align-self: center;
-    color: var(--white);
-    font-size: 4rem;
-    font-weight: 400;
-    max-width: 51.51rem;
-    text-align: center;
-  } */
+
+  @media ${devices.tablet} {
+    h1 {
+      align-self: flex-end;
+      font-size: 3rem;
+      max-width: 38rem;
+    }
+  }
+
+  @media ${devices.desktop} {
+    h1 {
+      align-self: flex-end;
+      font-size: 3.5rem;
+    }
+  }
 `;
 
 const Hero = () => {
