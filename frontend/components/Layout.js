@@ -1,4 +1,13 @@
+import dynamic from 'next/dynamic';
 import styled, { createGlobalStyle } from 'styled-components';
+import { devices } from './MediaQueries';
+
+const DynamicFooterWithNoSSR = dynamic(
+  // in cases when you don't want the component/module on the server-side
+  // because there are some dependencies or it only works in the browser.
+  () => import('../components/Footer/FooterContainer'),
+  { ssr: false }
+);
 
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
@@ -50,6 +59,10 @@ const Container = styled.div`
   height: 100vh;
   display: grid;
   grid-template-rows: 1fr 50px;
+
+  @media ${devices.laptop} {
+    grid-template-rows: 1fr;
+  }
 `;
 
 const Layout = ({ children }) => {
@@ -59,7 +72,7 @@ const Layout = ({ children }) => {
       <Container>
         <Header />
         {children}
-        <Footer />
+        <DynamicFooterWithNoSSR />
       </Container>
     </>
   );
