@@ -39,7 +39,7 @@ const FooterStyles = styled.footer`
       font-weight: 400;
     }
 
-    ul > li > p {
+    & > ul > li > p {
       font-size: 0.88rem;
     }
   }

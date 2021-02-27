@@ -1,41 +1,47 @@
 import styled from 'styled-components';
 
-const Triangle = styled.div`
+const BaseTooltip = styled.div`
   position: absolute;
-  right: 65%;
-  top: 35px;
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 20px solid var(--white);
+  border-radius: 5px;
+  background: var(--white);
+  padding: 6px 14px;
 `;
 
-const TooltipStyles = styled.div`
-  position: absolute;
+const LoginTooltip = styled(BaseTooltip)`
+  &:before {
+    position: absolute;
+    content: '';
+    right: 35%;
+    top: -15px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid var(--white);
+  }
   font-size: 0.88rem;
-  border-radius: 5px;
   top: 50px;
   height: 65px;
   right: 10%;
   width: 85px;
-  background: var(--white);
-
-  .tooltip-container {
-    height: 100%;
-    padding: 5px;
-  }
 `;
 
-const Tooltip = ({ children }) => {
-  return (
-    <>
-      <Triangle />
-      <TooltipStyles>
-        <div className="tooltip-container">{children}</div>
-      </TooltipStyles>
-    </>
-  );
-};
+const BookMenuTooltip = styled(BaseTooltip)`
+  &:before {
+    position: absolute;
+    content: '';
+    right: 35%;
+    top: -15px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid var(--white);
+  }
+  font-size: 0.8rem;
+  height: 332px;
+  width: 416px;
+  display: grid;
+`;
 
-export default Tooltip;
+export { LoginTooltip, BookMenuTooltip };

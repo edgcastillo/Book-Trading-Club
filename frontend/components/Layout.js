@@ -10,7 +10,6 @@ const DynamicFooterWithNoSSR = dynamic(
 );
 
 import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
 
 const GlobalStyles = createGlobalStyle`
   @font-face {
@@ -27,6 +26,7 @@ const GlobalStyles = createGlobalStyle`
   html {
     box-sizing: border-box;
     --black: #393939;
+    --color-dark-text: #2C293B;
     --white: #fff;
     --red-primary: #DE2454;
     --color-beige: #FFEEE6;

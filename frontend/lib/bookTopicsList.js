@@ -1,0 +1,28 @@
+// This should come from the backend - write a graphql query to get all the topics
+// or maybe just make a query when needed.
+export const bookTopicsList = [
+  { 'Popular Books': { address: 'popular-books' } },
+  { 'Arts & Photography': { address: 'arts-photography' } },
+  { 'Biography & Memoir': { address: 'biography-memoir' } },
+  { 'Business & Investing': { address: 'business-investing' } },
+  { "Children's Books": { address: 'childrens-books' } },
+  { 'Comics & Graphic Novels': { address: 'comics-novels' } },
+  { 'Cooking & Wine': { address: 'cooking-wine' } },
+  { Fantasy: { address: 'fantasy' } },
+  { History: { address: 'history' } },
+  { Horror: { address: 'horror' } },
+  { 'Humor & Games': { address: 'humor-games' } },
+  { 'Literature & Fiction': { address: 'literature-fiction' } },
+  { 'LGBTQ+': { address: 'lgbtq' } },
+  { 'Mystery, Thrillers, & Crime': { address: 'mystery-thrillers' } },
+  { Nonfiction: { address: 'non-fiction' } },
+  { Poetry: { address: 'poetry' } },
+  { Romance: { address: 'romance' } },
+  { 'Science Fiction': { address: 'science-fiction' } },
+  { 'Science & Technology': { address: 'science-technology' } },
+  { 'Self Development & Hobbies': { address: 'hobbies' } },
+  { 'Spanish Language': { address: 'spanish-language' } },
+  { 'Spirituality & Religion': { address: 'religion' } },
+  { 'Teen & Young Adult': { address: 'teen-adult' } },
+  { Travel: { address: 'travel' } },
+];

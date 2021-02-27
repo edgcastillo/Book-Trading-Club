@@ -25,3 +25,15 @@ export const RoundButton = styled.button`
       background: var(--color-light-gray);
     `}
 `;
+
+export const NavButton = styled.button`
+  position: relative;
+  background: var(--color-secondary);
+  border: none;
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    outline: 0;
+  }
+`;
