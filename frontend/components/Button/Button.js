@@ -27,8 +27,6 @@ export const RoundButton = styled.button`
 `;
 
 export const NavButton = styled.button`
-  position: relative;
-  background: var(--color-secondary);
   border: none;
   &:hover {
     cursor: pointer;
@@ -36,4 +34,20 @@ export const NavButton = styled.button`
   &:focus {
     outline: 0;
   }
+
+  ${(props) =>
+    props.primary &&
+    css`
+      background: var(--color-secondary);
+    `}
+  ${(props) =>
+    props.secondary &&
+    css`
+      background: var(--color-light-gray);
+      color: var(--color-secondary);
+      height: 2.5rem;
+      width: 2.5rem;
+      border-radius: 50%;
+      z-index: 1;
+    `}
 `;

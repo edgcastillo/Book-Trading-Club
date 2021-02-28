@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import styled, { createGlobalStyle } from 'styled-components';
 import { devices } from './MediaQueries';
@@ -66,13 +67,17 @@ const Container = styled.div`
 `;
 
 const Layout = ({ children }) => {
+  const [isMobile, setMobile] = useState(false);
+  const handleAppWidth = (isMobile) => {
+    setMobile(isMobile);
+  };
   return (
     <>
       <GlobalStyles />
       <Container>
-        <Header />
+        <Header isMobile={isMobile} />
         {children}
-        <DynamicFooterWithNoSSR />
+        <DynamicFooterWithNoSSR handleAppWidth={handleAppWidth} />
       </Container>
     </>
   );

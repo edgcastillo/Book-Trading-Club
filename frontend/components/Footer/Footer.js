@@ -97,7 +97,6 @@ const DesktopView = () => {
 };
 
 const Footer = ({ isMobile }) => {
-  console.log(isMobile === undefined);
   const [isMobileView, setMobileView] = useState(window.innerWidth <= 768);
 
   const updateFooterUi = () => {

@@ -12,12 +12,13 @@ function debounce(fn, ms) {
   };
 }
 
-const FooterContainer = () => {
+const FooterContainer = ({ handleAppWidth }) => {
   const [innerWindowWidth, setInnerWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
     const debouncedHandleResize = debounce(function handleResize() {
       setInnerWindowWidth(window.innerWidth);
     }, 100);
+    handleAppWidth(isMobile);
 
     window.addEventListener('resize', debouncedHandleResize);
 

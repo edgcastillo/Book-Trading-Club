@@ -4,14 +4,15 @@ import UserNavButton from '../UserNavButton/UserNavButton';
 import BookNavButton from '../BookNavButton/BookNavButton';
 import MobileNavButton from '../MobileNavButton/MobileNavButton';
 
-const Navbar = () => {
+const Navbar = ({ isMobile }) => {
+  console.log(isMobile);
   return (
     <NavbarStyles>
       <Logo name="Bookie" />
       <NavMenuStyles>
-        <UserNavButton />
-        <BookNavButton />
-        <MobileNavButton />
+        {!isMobile && <BookNavButton />}
+        {!isMobile && <UserNavButton />}
+        {isMobile && <MobileNavButton />}
       </NavMenuStyles>
     </NavbarStyles>
   );

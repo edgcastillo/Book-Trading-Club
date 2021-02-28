@@ -9,12 +9,14 @@ const MobileNavButton = () => {
 
   return (
     <>
-      <NavButton onClick={() => setShowSidenav(true)}>
-        <MenuRoundedIcon style={{ color: 'white' }} />
-      </NavButton>
+      {!showSidenav && (
+        <NavButton primary onClick={() => setShowSidenav(true)}>
+          <MenuRoundedIcon style={{ color: 'white' }} />
+        </NavButton>
+      )}
       {showSidenav && (
-        <NavButton onClick={() => setShowSidenav(false)}>
-          <CloseRoundedIcon style={{ color: 'white' }} />
+        <NavButton secondary onClick={() => setShowSidenav(false)}>
+          <CloseRoundedIcon />
         </NavButton>
       )}
       {showSidenav && <SideNav toggleSidenav={showSidenav} />}

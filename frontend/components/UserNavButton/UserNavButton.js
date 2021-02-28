@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import styled from 'styled-components';
 import Link from 'next/link';
 import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined';
 import handleClickOutside from '../handleClickOutside';
@@ -7,7 +8,7 @@ import { NavButton } from '../Button/Button';
 import { LoginTooltip } from '../Tooltip/Tooltip';
 import UserMenuStyles from './UserMenuStyles';
 
-const UserMenuLinks = () => {
+const UserMenuLinks = ({ handleClick }) => {
   return (
     <UserMenuStyles>
       <li>Sign Up</li>
@@ -16,24 +17,32 @@ const UserMenuLinks = () => {
   );
 };
 
+const UserMenuContainer = styled.div`
+  align-self: center;
+`;
+
 const UserNavButton = () => {
   const [isOpen, setOpen] = useState(false);
   const node = useRef();
+
+  const handleClick = (e) => {
+    setOpen(!isOpen);
+  };
 
   handleClickOutside(node, () => {
     setOpen(false);
   });
   return (
-    <>
-      <NavButton ref={node} onClick={() => setOpen(!isOpen)}>
+    <UserMenuContainer ref={node}>
+      <NavButton primary onClick={() => setOpen(!isOpen)}>
         <AccountCircleOutlinedIcon style={{ color: 'white' }} />
       </NavButton>
       {isOpen && (
         <LoginTooltip>
-          <UserMenuLinks />
+          <UserMenuLinks handleClick={handleClick} />
         </LoginTooltip>
       )}
-    </>
+    </UserMenuContainer>
   );
 };
 

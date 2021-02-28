@@ -26,16 +26,20 @@ export const NavbarStyles = styled.nav`
 `;
 
 export const NavMenuStyles = styled.ul`
+  position: relative;
   justify-self: end;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.63rem;
-  position: relative;
 
   .close-btn-container {
     position: absolute;
     z-index: 1;
     bottom: -35%;
     left: 30%;
+  }
+
+  @media ${devices.mobile} {
+    grid-template-columns: 1fr;
   }
 `;

@@ -9,10 +9,11 @@ const HeaderStyles = styled.header`
   background: var(--color-secondary);
 `;
 
-const Header = () => {
+const Header = ({ isMobile }) => {
+  // props drilling - not ideal but easier than rewrite half of the app with React ctx.
   return (
     <HeaderStyles>
-      <Navbar />
+      <Navbar isMobile={isMobile} />
     </HeaderStyles>
   );
 };
