@@ -23,7 +23,7 @@ const LoginTooltip = styled(BaseTooltip)`
   height: 65px;
   width: 85px;
   top: 50px;
-  left: 45%;
+  left: 38%;
 `;
 
 const BookMenuTooltip = styled(BaseTooltip)`

@@ -1,8 +1,7 @@
 import { useRef, useState } from 'react';
 import Link from 'next/link';
-import handleClickOutside from '../handleClickOutside';
-import styled from 'styled-components';
 
+import handleClickOutside from '../handleClickOutside';
 import { bookTopicsList } from '../../lib/bookTopicsList';
 import { NavButton } from '../Button/Button';
 import { BookMenuTooltip } from '../Tooltip/Tooltip';
@@ -14,9 +13,10 @@ const BookMenuDropdown = ({ data, handleClick }) => {
       {data.map((topic) => {
         const name = Object.keys([topic][0])[0];
         const id = [topic][0][name].address;
+        const address = id === 'books' ? `/${id}` : `/categories/${id}`;
         return (
           <li key={name}>
-            <Link href={`/categories/${id}`}>
+            <Link href={address}>
               <a
                 id={name}
                 className="link-title"

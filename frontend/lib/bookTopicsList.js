@@ -1,7 +1,7 @@
 // This should come from the backend - write a graphql query to get all the topics
 // or maybe just make a query when needed.
 export const bookTopicsList = [
-  { 'Popular Books': { address: 'popular-books' } },
+  { 'New Products': { address: 'books' } },
   { 'Arts & Photography': { address: 'arts-photography' } },
   { 'Biography & Memoir': { address: 'biography-memoir' } },
   { 'Business & Investing': { address: 'business-investing' } },
