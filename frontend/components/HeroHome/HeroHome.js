@@ -7,6 +7,7 @@ const HeroStyles = styled.section`
   display: grid;
   grid-template-rows: 1fr 1fr;
   justify-content: center;
+  z-index: -1;
 
   h1 {
     align-self: center;

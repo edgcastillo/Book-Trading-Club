@@ -1,6 +1,7 @@
+import { useContext } from 'react';
 import Link from 'next/link';
 import BookIcon from '../../public/Closed_Book_Icon.svg';
-import styled from 'styled-components';
+import styled, { ThemeContext } from 'styled-components';
 import { devices } from '../MediaQueries';
 
 const LogoStyles = styled.div`
@@ -14,7 +15,7 @@ const LogoStyles = styled.div`
     align-items: center;
     justify-content: start;
     h1 {
-      color: var(--white);
+      color: ${({ color }) => color};
       width: 5.6rem;
       cursor: pointer;
       font-weight: 200;
@@ -32,8 +33,9 @@ const LogoStyles = styled.div`
 `;
 
 const Logo = ({ name }) => {
+  const theme = useContext(ThemeContext);
   return (
-    <LogoStyles>
+    <LogoStyles {...theme}>
       <Link href="/">
         <span>
           <BookIcon />

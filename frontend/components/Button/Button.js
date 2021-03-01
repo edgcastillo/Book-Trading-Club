@@ -23,31 +23,21 @@ export const RoundButton = styled.button`
     css`
       color: var(--color-secondary);
       background: var(--color-light-gray);
+      height: 2.5rem;
+      width: 2.5rem;
+      border-radius: 50%;
+      z-index: 1;
     `}
 `;
 
 export const NavButton = styled.button`
   border: none;
+  background: ${({ background }) => background};
+  color: ${({ color }) => color};
   &:hover {
     cursor: pointer;
   }
   &:focus {
     outline: 0;
   }
-
-  ${(props) =>
-    props.primary &&
-    css`
-      background: var(--color-secondary);
-    `}
-  ${(props) =>
-    props.secondary &&
-    css`
-      background: var(--color-light-gray);
-      color: var(--color-secondary);
-      height: 2.5rem;
-      width: 2.5rem;
-      border-radius: 50%;
-      z-index: 1;
-    `}
 `;

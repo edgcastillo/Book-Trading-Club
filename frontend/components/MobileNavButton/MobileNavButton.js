@@ -1,23 +1,25 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { ThemeContext } from 'styled-components';
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded';
 import CloseRoundedIcon from '@material-ui/icons/CloseRounded';
 import SideNav from '../Sidenav/Sidenav';
-import { NavButton } from '../Button/Button';
+import { NavButton, RoundButton } from '../Button/Button';
 
 const MobileNavButton = () => {
+  const theme = useContext(ThemeContext);
   const [showSidenav, setShowSidenav] = useState(false);
 
   return (
     <>
       {!showSidenav && (
-        <NavButton primary onClick={() => setShowSidenav(true)}>
-          <MenuRoundedIcon style={{ color: 'white' }} />
+        <NavButton {...theme} onClick={() => setShowSidenav(true)}>
+          <MenuRoundedIcon style={{ color: theme.color }} />
         </NavButton>
       )}
       {showSidenav && (
-        <NavButton secondary onClick={() => setShowSidenav(false)}>
+        <RoundButton close onClick={() => setShowSidenav(false)}>
           <CloseRoundedIcon />
-        </NavButton>
+        </RoundButton>
       )}
       {showSidenav && <SideNav toggleSidenav={showSidenav} />}
     </>

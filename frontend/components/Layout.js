@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { devices } from './MediaQueries';
 
 const DynamicFooterWithNoSSR = dynamic(
@@ -66,7 +67,20 @@ const Container = styled.div`
   }
 `;
 
+const theme = {
+  primary: {
+    background: '#573ba3',
+    color: '#fff',
+  },
+  secondary: {
+    background: '#fff',
+    color: '#2C293B',
+  },
+};
+
 const Layout = ({ children }) => {
+  const router = useRouter();
+  const template = router.pathname === '/' ? 'primary' : 'secondary';
   const [isMobile, setMobile] = useState(false);
   const handleAppWidth = (isMobile) => {
     setMobile(isMobile);
@@ -74,11 +88,13 @@ const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyles />
-      <Container>
-        <Header isMobile={isMobile} />
-        {children}
-        <DynamicFooterWithNoSSR handleAppWidth={handleAppWidth} />
-      </Container>
+      <ThemeProvider theme={theme[template]}>
+        <Container>
+          <Header isMobile={isMobile} />
+          {children}
+          <DynamicFooterWithNoSSR handleAppWidth={handleAppWidth} />
+        </Container>
+      </ThemeProvider>
     </>
   );
 };

@@ -4,8 +4,7 @@ import UserNavButton from '../UserNavButton/UserNavButton';
 import BookNavButton from '../BookNavButton/BookNavButton';
 import MobileNavButton from '../MobileNavButton/MobileNavButton';
 
-const Navbar = ({ isMobile }) => {
-  console.log(isMobile);
+const Navbar = ({ isMobile, styleType }) => {
   return (
     <NavbarStyles>
       <Logo name="Bookie" />

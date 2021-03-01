@@ -1,4 +1,5 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useContext } from 'react';
+import { ThemeContext } from 'styled-components';
 import Link from 'next/link';
 
 import handleClickOutside from '../handleClickOutside';
@@ -33,6 +34,7 @@ const BookMenuDropdown = ({ data, handleClick }) => {
 };
 
 const BookNavButton = () => {
+  const theme = useContext(ThemeContext);
   const [isOpen, setOpen] = useState(false);
   const node = useRef();
 
@@ -46,8 +48,8 @@ const BookNavButton = () => {
 
   return (
     <div ref={node}>
-      <NavButton primary onClick={() => setOpen(!isOpen)}>
-        <p style={{ color: 'white' }}>Browse</p>
+      <NavButton {...theme} onClick={() => setOpen(!isOpen)}>
+        <p style={{ color: theme.color }}>Browse</p>
       </NavButton>
       {isOpen && (
         <BookMenuTooltip>

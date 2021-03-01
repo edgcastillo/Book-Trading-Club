@@ -8,6 +8,7 @@ export const NavbarStyles = styled.nav`
   align-items: center;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  height: 100%;
 
   @media ${devices.tablet} {
     margin: 0 auto;

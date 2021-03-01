@@ -1,5 +1,5 @@
-import { useState, useRef } from 'react';
-import styled from 'styled-components';
+import { useState, useRef, useContext } from 'react';
+import styled, { ThemeContext } from 'styled-components';
 import Link from 'next/link';
 import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined';
 import handleClickOutside from '../handleClickOutside';
@@ -22,6 +22,7 @@ const UserMenuContainer = styled.div`
 `;
 
 const UserNavButton = () => {
+  const theme = useContext(ThemeContext);
   const [isOpen, setOpen] = useState(false);
   const node = useRef();
 
@@ -34,8 +35,8 @@ const UserNavButton = () => {
   });
   return (
     <UserMenuContainer ref={node}>
-      <NavButton primary onClick={() => setOpen(!isOpen)}>
-        <AccountCircleOutlinedIcon style={{ color: 'white' }} />
+      <NavButton {...theme} onClick={() => setOpen(!isOpen)}>
+        <AccountCircleOutlinedIcon style={{ color: theme.color }} />
       </NavButton>
       {isOpen && (
         <LoginTooltip>

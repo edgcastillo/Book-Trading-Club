@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import { useContext } from 'react';
+import styled, { ThemeContext } from 'styled-components';
 
 import Navbar from '../Navbar/Navbar';
 
@@ -6,13 +7,14 @@ const HeaderStyles = styled.header`
   width: 100%;
   position: fixed;
   top: 0;
-  background: var(--color-secondary);
+  background: ${({ background }) => background};
+  color: ${({ color }) => color};
 `;
 
 const Header = ({ isMobile }) => {
-  // props drilling - not ideal but easier than rewrite half of the app with React ctx.
+  const theme = useContext(ThemeContext);
   return (
-    <HeaderStyles>
+    <HeaderStyles {...theme}>
       <Navbar isMobile={isMobile} />
     </HeaderStyles>
   );
