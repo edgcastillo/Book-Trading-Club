@@ -5,7 +5,7 @@ import {
   ImageSection,
   BookListTitle,
   Author,
-} from './BookItemStyle';
+} from './BooksStyle';
 
 const BookItem = ({ id, title, author, image, price }) => {
   const { altText } = image;

@@ -1,8 +1,8 @@
 import { NavbarStyles, NavMenuStyles } from './NavbarStyle';
 import Logo from './Logo';
-import UserNavButton from '../UserNavButton/UserNavButton';
-import BookNavButton from '../BookNavButton/BookNavButton';
-import MobileNavButton from '../MobileNavButton/MobileNavButton';
+import UserNavButton from '../../Button/UserNavButton';
+import BookNavButton from '../../Button/BookNavButton';
+import MobileNavButton from '../../Button/MobileNavButton';
 
 const Navbar = ({ isMobile, styleType }) => {
   return (

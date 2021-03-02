@@ -2,7 +2,7 @@ import { useQuery } from '@apollo/client';
 import gql from 'graphql-tag'; // turn our string in a proper graphql query
 
 import { BooksGrid } from './BooksStyle';
-import BookItem from '../BookItem/BookItem';
+import BookItem from './BookItem';
 
 const ALL_BOOKS_QUERY = gql`
   query ALL_BOOKS_QUERY {

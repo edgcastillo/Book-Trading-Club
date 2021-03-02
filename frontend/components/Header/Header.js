@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import styled, { ThemeContext } from 'styled-components';
 
-import Navbar from '../Navbar/Navbar';
+import Navbar from './Navbar/Navbar';
 
 const HeaderStyles = styled.header`
   width: 100%;

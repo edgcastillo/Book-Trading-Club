@@ -3,7 +3,7 @@ import { ThemeContext } from 'styled-components';
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded';
 import CloseRoundedIcon from '@material-ui/icons/CloseRounded';
 import SideNav from '../Sidenav/Sidenav';
-import { NavButton, RoundButton } from '../Button/Button';
+import { NavButton, RoundButton } from './Button';
 
 const MobileNavButton = () => {
   const theme = useContext(ThemeContext);

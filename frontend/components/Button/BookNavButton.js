@@ -4,9 +4,9 @@ import Link from 'next/link';
 
 import handleClickOutside from '../handleClickOutside';
 import { bookTopicsList } from '../../lib/bookTopicsList';
-import { NavButton } from '../Button/Button';
-import { BookMenuTooltip } from '../Tooltip/Tooltip';
-import BookMenuStyles from './BookNavStyles';
+import { NavButton } from './Button';
+import { BookMenuTooltip } from '../Common/Tooltip';
+import { BookMenuStyles } from './ButtonStyles';
 
 const BookMenuDropdown = ({ data, handleClick }) => {
   return (

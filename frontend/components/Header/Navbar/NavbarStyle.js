@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { devices } from '../MediaQueries';
+import { devices } from '../../MediaQueries';
 
 export const NavbarStyles = styled.nav`
   height: 4.15rem;
