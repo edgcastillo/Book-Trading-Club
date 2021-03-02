@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import SearchBar from '../SearchBar/SearchBar';
+import SearchBar from '../Common/SearchBar';
 import { devices } from '../MediaQueries';
 
 const HeroStyles = styled.section`

@@ -1,8 +1,8 @@
 import { useContext } from 'react';
 import Link from 'next/link';
-import BookIcon from '../../public/Closed_Book_Icon.svg';
+import BookIcon from '../../../public/Closed_Book_Icon.svg';
 import styled, { ThemeContext } from 'styled-components';
-import { devices } from '../MediaQueries';
+import { devices } from '../../MediaQueries';
 
 const LogoStyles = styled.div`
   svg {
