@@ -52,9 +52,11 @@ const BookNavButton = () => {
         <p style={{ color: theme.color }}>Browse</p>
       </NavButton>
       {isOpen && (
-        <BookMenuTooltip>
-          <BookMenuDropdown data={bookTopicsList} handleClick={handleClick} />
-        </BookMenuTooltip>
+        <div className="book-tooltip">
+          <BookMenuTooltip>
+            <BookMenuDropdown data={bookTopicsList} handleClick={handleClick} />
+          </BookMenuTooltip>
+        </div>
       )}
     </div>
   );

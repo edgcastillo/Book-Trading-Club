@@ -10,32 +10,33 @@ const LoginTooltip = styled(BaseTooltip)`
   &:before {
     position: absolute;
     content: '';
-    right: 42%;
-    top: -15px;
+    right: 27%;
+    top: -10px;
     width: 0;
     height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
     border-bottom: 20px solid var(--white);
   }
   position: absolute;
   font-size: 0.88rem;
   height: 65px;
   width: 85px;
-  top: 50px;
-  left: 38%;
+  top: 25px;
+  right: -5px;
+  box-shadow: -1px 0px 5px 7px rgb(0 0 0 / 11%);
 `;
 
 const BookMenuTooltip = styled(BaseTooltip)`
   &:before {
     position: absolute;
     content: '';
-    right: 50%;
-    top: -15px;
+    right: 51%;
+    top: -10px;
     width: 0;
     height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
     border-bottom: 20px solid var(--white);
   }
   position: absolute;
@@ -43,8 +44,9 @@ const BookMenuTooltip = styled(BaseTooltip)`
   height: 332px;
   width: 416px;
   display: grid;
-  top: 50px;
-  right: -125px;
+  top: 100%;
+  right: 5%;
+  box-shadow: -1px 0px 5px 7px rgb(0 0 0 / 11%);
 `;
 
 export { LoginTooltip, BookMenuTooltip };

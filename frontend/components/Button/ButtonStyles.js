@@ -8,6 +8,7 @@ export const UserMenuStyles = styled.ul`
   justify-content: center;
   align-items: center;
   padding: 0;
+  color: var(--color-dark-text);
 
   li:first-child {
     margin-bottom: 5px;

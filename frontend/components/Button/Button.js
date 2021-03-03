@@ -41,3 +41,11 @@ export const NavButton = styled.button`
     outline: 0;
   }
 `;
+
+export const BasedButton = styled.button`
+  height: 2.31rem;
+  width: 11.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;

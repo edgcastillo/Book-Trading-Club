@@ -27,7 +27,6 @@ export const NavbarStyles = styled.nav`
 `;
 
 export const NavMenuStyles = styled.ul`
-  position: relative;
   justify-self: end;
   display: grid;
   grid-template-columns: 1fr 1fr;

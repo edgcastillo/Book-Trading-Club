@@ -19,13 +19,15 @@ const UserMenuLinks = ({ handleClick }) => {
 
 const UserMenuContainer = styled.div`
   align-self: center;
+  & > .login-tooltip {
+    position: relative;
+  }
 `;
 
 const UserNavButton = () => {
   const theme = useContext(ThemeContext);
   const [isOpen, setOpen] = useState(false);
   const node = useRef();
-
   const handleClick = (e) => {
     setOpen(!isOpen);
   };
@@ -39,9 +41,11 @@ const UserNavButton = () => {
         <AccountCircleOutlinedIcon style={{ color: theme.color }} />
       </NavButton>
       {isOpen && (
-        <LoginTooltip>
-          <UserMenuLinks handleClick={handleClick} />
-        </LoginTooltip>
+        <div className="login-tooltip">
+          <LoginTooltip>
+            <UserMenuLinks handleClick={handleClick} />
+          </LoginTooltip>
+        </div>
       )}
     </UserMenuContainer>
   );

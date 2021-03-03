@@ -8,7 +8,6 @@ import { NavButton, RoundButton } from './Button';
 const MobileNavButton = () => {
   const theme = useContext(ThemeContext);
   const [showSidenav, setShowSidenav] = useState(false);
-
   return (
     <>
       {!showSidenav && (
