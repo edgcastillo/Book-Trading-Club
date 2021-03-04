@@ -4,10 +4,11 @@ import { devices } from '../MediaQueries';
 
 const HeroStyles = styled.section`
   background: var(--color-secondary);
+  height: 100%;
+  align-self: center;
   display: grid;
   grid-template-rows: 1fr 1fr;
   justify-content: center;
-  z-index: -1;
 
   h1 {
     align-self: center;

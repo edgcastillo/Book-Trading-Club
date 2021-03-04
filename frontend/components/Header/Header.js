@@ -5,10 +5,11 @@ import Navbar from './Navbar/Navbar';
 
 const HeaderStyles = styled.header`
   width: 100%;
-  position: fixed;
+  position: sticky;
   top: 0;
   background: ${({ background }) => background};
   color: ${({ color }) => color};
+  z-index: 1;
 `;
 
 const Header = ({ isMobile }) => {

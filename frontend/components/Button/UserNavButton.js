@@ -19,6 +19,7 @@ const UserMenuLinks = ({ handleClick }) => {
 
 const UserMenuContainer = styled.div`
   align-self: center;
+  justify-self: end;
   & > .login-tooltip {
     position: relative;
   }

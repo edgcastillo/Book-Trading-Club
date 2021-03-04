@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
-import { devices } from './MediaQueries';
 
 const DynamicFooterWithNoSSR = dynamic(
   // in cases when you don't want the component/module on the server-side
@@ -58,13 +57,20 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 const Container = styled.div`
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-rows: 1fr 50px;
+  grid-template-rows: 1fr auto;
+`;
 
-  @media ${devices.laptop} {
-    grid-template-rows: 1fr;
+const Main = styled.section`
+  width: 100%;
+  height: 100%;
+  background: ${({ background }) => background};
+
+  .content {
+    max-width: 65rem;
+    margin: 0 auto;
   }
 `;
 
@@ -91,8 +97,10 @@ const Layout = ({ children }) => {
       <GlobalStyles />
       <ThemeProvider theme={theme[template]}>
         <Container>
-          <Header isMobile={isMobile} />
-          {children}
+          <Main {...theme[template]}>
+            <Header isMobile={isMobile} />
+            <section className="content">{children}</section>
+          </Main>
           <DynamicFooterWithNoSSR handleAppWidth={handleAppWidth} />
         </Container>
       </ThemeProvider>

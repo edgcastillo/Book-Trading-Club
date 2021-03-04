@@ -1,11 +1,7 @@
 import Books from '../components/Books/Books';
 
 const BooksPage = () => {
-  return (
-    <div>
-      <Books />
-    </div>
-  );
+  return <Books />;
 };
 
 export default BooksPage;

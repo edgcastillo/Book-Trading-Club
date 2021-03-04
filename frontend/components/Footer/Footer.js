@@ -8,7 +8,8 @@ import Section from './Section';
 
 const FooterStyles = styled.footer`
   width: 100%;
-  height: 100%;
+  align-self: end;
+  justify-self: end;
   display: grid;
   padding: 5px 0;
   grid-template-rows: 1fr 1fr;

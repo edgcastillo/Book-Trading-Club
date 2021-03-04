@@ -1,17 +1,17 @@
 import styled from 'styled-components';
+import { devices } from '../MediaQueries';
 
 export const BooksGrid = styled.div`
-  max-width: 65rem;
-  margin: 100px auto 25px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  justify-self: center;
+  grid-template-columns: repeat(auto-fit, minmax(13.5rem, 1fr));
   gap: 0.5rem;
 `;
 
 export const BookListCard = styled.div`
-  width: 11.5rem;
   height: 29rem;
   background: var(--white);
+  display: grid;
   grid-template-rows: repeat(4, 1fr);
   justify-self: center;
 `;
@@ -19,7 +19,7 @@ export const BookListCard = styled.div`
 export const ImageSection = styled.section`
   background: var(--color-callout);
   border-radius: 5px;
-  width: 100%;
+  max-width: 100%;
   border: 1px solid #f0f0f0;
   padding: 0.63rem;
   text-align: center;
@@ -35,6 +35,7 @@ export const BookListTitle = styled.h4`
   font-weight: 500;
   text-overflow: ellipsis;
   margin-bottom: 0.25rem;
+  width: 13rem;
 `;
 
 export const Author = styled.p`
