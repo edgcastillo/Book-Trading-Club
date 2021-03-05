@@ -27,7 +27,6 @@ const ALL_BOOKS_QUERY = gql`
 
 const Books = () => {
   const { data, error, loading } = useQuery(ALL_BOOKS_QUERY);
-  console.log(data, error, loading);
   if (loading) return null;
   return (
     <BooksGrid>

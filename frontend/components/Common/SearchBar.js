@@ -4,7 +4,7 @@ import SearchRoundedIcon from '@material-ui/icons/SearchRounded';
 import { RoundButton } from '../Button/Button';
 import { devices } from '../MediaQueries';
 
-const SearchBarContainer = styled.div`
+const Form = styled.form`
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 5px;
@@ -42,7 +42,7 @@ const SearchBarContainer = styled.div`
 
 const SearchBar = () => {
   return (
-    <SearchBarContainer>
+    <Form>
       <input
         className="search-bar"
         type="search"
@@ -54,7 +54,7 @@ const SearchBar = () => {
           <SearchRoundedIcon style={{ color: 'white' }} />
         </RoundButton>
       </div>
-    </SearchBarContainer>
+    </Form>
   );
 };
 

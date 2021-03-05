@@ -6,13 +6,14 @@ export const BooksGrid = styled.div`
   justify-self: center;
   grid-template-columns: repeat(auto-fit, minmax(13.5rem, 1fr));
   gap: 0.5rem;
+  margin-bottom: 1rem;
 `;
 
 export const BookListCard = styled.div`
   height: 29rem;
   background: var(--white);
   display: grid;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: 1fr auto 1fr auto;
   justify-self: center;
 `;
 
@@ -36,6 +37,10 @@ export const BookListTitle = styled.h4`
   text-overflow: ellipsis;
   margin-bottom: 0.25rem;
   width: 13rem;
+
+  & > a {
+    color: var(--color-dark-text);
+  }
 `;
 
 export const Author = styled.p`

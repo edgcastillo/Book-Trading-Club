@@ -22,8 +22,8 @@ const LoginTooltip = styled(BaseTooltip)`
   font-size: 0.88rem;
   height: 65px;
   width: 85px;
-  top: 25px;
-  right: -5px;
+  top: 10px;
+  right: -25px;
   box-shadow: -1px 0px 5px 7px rgb(0 0 0 / 11%);
 `;
 
@@ -44,8 +44,8 @@ const BookMenuTooltip = styled(BaseTooltip)`
   height: 332px;
   width: 416px;
   display: grid;
-  top: 100%;
-  right: 5%;
+  top: 63px;
+  right: 22.5%;
   box-shadow: -1px 0px 5px 7px rgb(0 0 0 / 11%);
 `;
 
