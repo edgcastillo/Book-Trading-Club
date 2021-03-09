@@ -3,7 +3,6 @@ import { devices } from '../MediaQueries';
 
 const StyledHeading = styled.div`
   font-weight: 400;
-  font-size: 1.75rem;
   ${({ primary }) =>
     primary &&
     css`
@@ -14,16 +13,6 @@ const StyledHeading = styled.div`
     css`
       color: #000;
     `}
-  @media ${devices.tablet} {
-    & {
-      font-size: 3rem;
-    }
-  }
-  @media ${devices.desktop} {
-    & {
-      font-size: 3.5rem;
-    }
-  }
 `;
 
 const Heading = ({ level = 1, children, ...rest }) => {

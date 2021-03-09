@@ -15,18 +15,21 @@ const HeroStyles = styled.section`
     align-self: center;
     max-width: 16rem;
     text-align: center;
+    font-size: 1.75rem;
   }
 
   @media ${devices.tablet} {
-    h1 {
+    & > h1 {
       align-self: flex-end;
+      font-size: 3rem;
       max-width: 38rem;
     }
   }
 
   @media ${devices.desktop} {
-    h1 {
+    & > h1 {
       align-self: flex-end;
+      font-size: 3.5rem;
     }
   }
 `;
@@ -34,7 +37,7 @@ const HeroStyles = styled.section`
 const Hero = () => {
   return (
     <HeroStyles>
-      <Heading level="1" primary large>
+      <Heading level="1" primary>
         Book Trading Club. Connecting people with Books
       </Heading>
       <SearchBar />
