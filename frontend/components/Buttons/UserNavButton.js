@@ -5,7 +5,7 @@ import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined'
 import handleClickOutside from '../handleClickOutside';
 
 import { NavButton } from './Button';
-import { LoginTooltip } from '../Common/Tooltip';
+import { LoginTooltip } from '../Tooltip/Tooltip';
 import { UserMenuStyles } from './ButtonStyles';
 
 const UserMenuLinks = ({ handleClick }) => {

@@ -7,7 +7,7 @@ import {
   BookListTitle,
   Author,
 } from './BooksStyle';
-import RequestButton from '../Button/RequestButton';
+import RequestButton from '../Buttons/RequestButton';
 
 const BookItem = ({ id, title, author, image, price }) => {
   const { altText } = image;

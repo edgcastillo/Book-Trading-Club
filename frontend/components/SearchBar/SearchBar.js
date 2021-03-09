@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import SearchRoundedIcon from '@material-ui/icons/SearchRounded';
-import { RoundButton } from '../Button/Button';
+import { RoundButton } from '../Buttons/Button';
 import { devices } from '../MediaQueries';
 
 const Form = styled.form`

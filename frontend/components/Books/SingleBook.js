@@ -1,3 +1,10 @@
-// Fetch/query a single item
-import { useQuery } from '@apollo/client';
-import gql from 'graphql-tag';
+const SingleBook = ({ data }) => {
+  const { Book } = data; // this is how the query returns the book "Book"
+  return (
+    <div>
+      <h1>{Book.title}</h1>
+    </div>
+  );
+};
+
+export default SingleBook;

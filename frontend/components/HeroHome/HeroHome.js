@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import SearchBar from '../Common/SearchBar';
+import SearchBar from '../SearchBar/SearchBar';
+import Heading from '../Heading/Heading';
 import { devices } from '../MediaQueries';
 
 const HeroStyles = styled.section`
@@ -12,9 +13,6 @@ const HeroStyles = styled.section`
 
   h1 {
     align-self: center;
-    color: var(--white);
-    font-size: 1.5rem;
-    font-weight: 400;
     max-width: 16rem;
     text-align: center;
   }
@@ -22,7 +20,6 @@ const HeroStyles = styled.section`
   @media ${devices.tablet} {
     h1 {
       align-self: flex-end;
-      font-size: 3rem;
       max-width: 38rem;
     }
   }
@@ -30,7 +27,6 @@ const HeroStyles = styled.section`
   @media ${devices.desktop} {
     h1 {
       align-self: flex-end;
-      font-size: 3.5rem;
     }
   }
 `;
@@ -38,7 +34,9 @@ const HeroStyles = styled.section`
 const Hero = () => {
   return (
     <HeroStyles>
-      <h1>Book Trading Club. Connecting people with Books</h1>
+      <Heading level="1" primary large>
+        Book Trading Club. Connecting people with Books
+      </Heading>
       <SearchBar />
     </HeroStyles>
   );
